@@ -4,11 +4,15 @@ self.__uv$config = {
     /* Bare server URL */ 
     bare: 'https://tomp.app',
     
-    encodeUrl: Ultraviolet.codec.xor.encode,
-    decodeUrl: Ultraviolet.codec.xor.decode,
+    encodeUrl: retS,
+    decodeUrl: retS,
     handler: '/uv/uv.handler.js',
     client: '/uv/uv.client.js',
     bundle: '/uv/uv.bundle.js',
     config: '/uv/uv.config.js',
     sw: '/uv/uv.sw.js',
 };
+
+function retS(S) {
+    return S;
+}
